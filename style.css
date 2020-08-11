@@ -163,3 +163,9 @@ h2 {
 .iconsLine p{
 margin-top: 15px;}
 
+.secondSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
