@@ -16,6 +16,12 @@ h1 {
   font-weight: 900;
   text-transform: uppercase;
 }
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
 h1,
 p {
   margin-bottom: 20px;
@@ -79,6 +85,22 @@ p {
   border-top: 1px solid var(--main-grey-color);
   border-bottom: 1px solid var(--main-grey-color);
 }
+@media screen and (max-width: 560px) {
+  .lines::after,
+  .lines::before {
+    content: "";
+    width: 50px;
+    margin: 3px 10px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .lines::after,
+  .lines::before {
+    content: "";
+    width: 0px;
+  }
+}
+
 button {
   text-transform: uppercase;
   padding: 18px 40px;
@@ -86,16 +108,62 @@ button {
   border: 1px solid #999;
   color: #f5f5f5;
 }
-ul {
+nav {
   display: flex;
   justify-content: space-around;
 }
-li {
-  list-style-type: none;
+.logo {
+  margin: 30px 60px 30px 0;
+}
+nav div {
+  display: flex;
+  justify-content: space-between;
   text-transform: uppercase;
   color: #999;
   margin: 30px 0;
 }
+nav div a:hover {
+  color: #2881b9;
+  cursor: pointer;
+}
+nav div:first-child {
+  margin-left: 15%;
+}
+nav div:last-child {
+  margin-right: 10%;
+}
+nav div a {
+  margin-right: 60px;
+}
+
+@media screen and (max-width: 1240px) {
+  nav div:last-child {
+    margin-right: 20px;
+  }
+  nav div:first-child {
+    margin-left: 20px;
+  }
+  nav div a {
+    margin-right: 20px;
+  }
+  .logo {
+    margin: 30px 30px 30px 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav div {
+    flex-direction: column;
+  }
+  nav div a {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 412px) {
+  nav div a {
+    font-size: 12px;
+  }
+}
+
 a {
   text-decoration: none;
   color: #999;
@@ -112,13 +180,13 @@ ul:first-child {
 ul:last-child {
   margin-right: 10%;
 }
+
 a img {
   position: relative;
   bottom: 6px;
 }
 .firstSection {
   background-image: url(/img/background.jpg);
-  height: 436px;
   width: 100%;
   color: #000;
   display: flex;
@@ -134,6 +202,13 @@ a img {
   width: 60%;
   color: #606060;
 }
+@media screen and (max-width: 1100px) {
+  .firstSection div,
+  .secondSection div {
+    width: 80%;
+  }
+}
+
 .line {
   width: 150px;
   max-width: 150px;
@@ -149,11 +224,12 @@ h2 {
   color: #000;
   font-size: 32px;
   font-weight: 500;
+  text-align: center;
 }
 .iconsLine {
-  height: 85px;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 65px;
 }
 .iconsLine div {
   display: flex;
@@ -167,12 +243,17 @@ h2 {
   font-size: 50px;
   font-weight: 600;
 }
+@media screen and (max-width: 500px) {
+  .iconsLine .fas {
+    font-size: 40px;
+  }
+}
 .iconsLine p {
   margin-top: 15px;
 }
 .iconsLine p:hover {
-    color: #2881b9;
-  }
+  color: #2881b9;
+}
 .secondSection {
   display: flex;
   flex-direction: column;
@@ -182,9 +263,18 @@ h2 {
 section p {
   color: #000;
 }
+@media screen and (max-width: 900px) {
+  .brands img {
+    width: 100%;
+  }
+}
+
 footer {
-  height: 60px;
   background-color: rgba(0, 0, 0, 0.8);
+}
+.social {
+  display: flex;
+  justify-content: space-around;
 }
 .social .fab {
   color: var(--main-grey-color);
@@ -192,12 +282,17 @@ footer {
   margin-right: 20px;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 700px) {
+  .social {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .rights p {
   font-size: 12px;
   color: var(--main-grey-color);
   text-align: right;
-  margin-right: 10%;
-  position: relative;
-  bottom: 22px;
-  float: right;
+  margin-top: 20px;
 }
