@@ -170,6 +170,9 @@ h2 {
 .iconsLine p {
   margin-top: 15px;
 }
+.iconsLine p:hover {
+    color: #2881b9;
+  }
 .secondSection {
   display: flex;
   flex-direction: column;
